@@ -1,0 +1,39 @@
+<nav class="overlay-nav navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+
+        <div>
+
+            <img src="../../../assets/images/logo.png" width="35px" alt="logo">
+
+            <a class="navbar-brand" style="color:#3E0E12; font-weight: bold;" href="#">AGRISOFT</a>
+
+        </div>
+
+        <button class="navbar-toggler btn btn-outline-success" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav sticky-top">
+                <li class="nav-item">
+                    <a class="nav-link" href="./reportes">Reportes comunitarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./product-list">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./reportar">Reportar Plaga</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./perfiles">Atención agrícola</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['../login']">Iniciar sesión</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

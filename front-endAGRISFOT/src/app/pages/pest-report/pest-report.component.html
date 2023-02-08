@@ -1,0 +1,39 @@
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script defer src="./js/scrooll.js"></script>
+</head>
+<app-header></app-header>
+<br>
+<section id="Reporte Nacionales" class="mt-5">
+  <div class="col mt-5 text-center text-uppercase ">
+      <h1>Reportes Nacionales</h1>
+    </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="mb-6 mt-8 " style="max-width: 900px;">
+                          <div *ngFor="let reportes of pestReport" class="card-body">
+                              <h2 class="h2-report">{{reportes.plaga}}</h2>
+                              <hr>
+                              <div class="cardM">
+                              <div class="card">
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><h5>Plaga:</h5><p class="card-title" style="text-align: right; margin-top:-40px;">{{reportes.description}}</p></li>
+                                    <li class="list-group-item"><h5>Ubicacion:</h5> <p class="card-title" style="text-align: right; margin-top:-40px;">{{reportes.provincia}}</p> </li>
+                                    <li class="list-group-item"><h5>Fecha de reporte:</h5> <p class="card-title" style="text-align: right; margin-top:-40px;">{{reportes.createdAt}}</p></li>
+                                  </ul>
+                                </div>
+                                <div class="img-card-repo">
+                                 <img  [src]="reportes.imageURL" width="90%">  
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+          </div>
+      </div>
+  </div>
+  <br>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,123 @@
+<head>
+  <title>AGRISOFT</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script defer src="./js/scrooll.js"></script>
+</head>
+<header class="header">
+  <nav class=" navbar  navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+  
+        <div>
+            <img src="../../../assets/images/logo.png" width="35px" alt="logo">
+            <a class="navbar-brand" style="color:#3E0E12; font-weight: bold;" href="./ag-admin">Administrador</a>
+        </div>
+  
+        
+    </div>
+  </nav>
+  </header>
+<body>
+    <div class="container2">
+      <div class="title">{{titulo}}</div>
+      <div class="content">
+        <form action="#" [formGroup]="perfilForm" (ngSubmit)=" agregarPerfil()">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombre</span>
+              <input type="text" formControlName="ingeniero" name="ingeniero" placeholder="Ej. Ing. Andres Pérez" required>
+              <div class="text-danger"
+                *ngIf="perfilForm.get('ingeniero')?.hasError('required') && perfilForm.get('ingeniero')?.touched" >
+                <span>Este campo es <strong>obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Profesión</span>
+              <input type="text" formControlName="profesion" name="profesion" placeholder="Ej. Ingeniero agrónomo" required>
+              <div class="text-danger"
+              *ngIf="perfilForm.get('profesion')?.hasError('required') && perfilForm.get('profesion')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Descripción:</span>
+              <input type="text" formControlName="description" name="description" placeholder="Breve descripción" required>
+              <div class="text-danger"
+              *ngIf="perfilForm.get('description')?.hasError('required') && perfilForm.get('description')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Provincia</span>
+              <input type="text" formControlName="provincia" name="provincia" placeholder="Ejemplo Esmeraldas" required>
+              <div class="text-danger"
+              *ngIf="perfilForm.get('provincia')?.hasError('required') && perfilForm.get('provincia')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Region</span>
+              <input type="text" formControlName="region" name="region" placeholder="Ejemplo Sierra" required>
+              <div class="text-danger"
+              *ngIf="perfilForm.get('region')?.hasError('required') && perfilForm.get('region')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input type="text" formControlName="password" name="password" placeholder="Contraseña" required>
+              <div class="text-danger"
+              *ngIf="perfilForm.get('password')?.hasError('required') && perfilForm.get('password')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <input type="text" placeholder="Confirm your password" required>
+            </div>
+             <div class="input-box">
+               <span class="details">Foto</span>
+                <input type="text" formControlName="photo" name="photo" placeholder="Fotografía" required>
+                <div class="text-danger"
+              *ngIf="perfilForm.get('photo')?.hasError('required') && perfilForm.get('photo')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <button routerLink="/ag-admin" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+            <button type="submit" style="margin-left: 9px;"  [disabled]="perfilForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
+        </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box box-logo">
+            <div class="box-img-content">
+                <img class="img-footer" src="../../../assets/images/logo.png" alt="logo">
+            </div>
+            <div>
+                <h3 class="text-light" style="font-size:20px">AGRISOFT</h3>
+            </div>
+        </div>
+        <div class="box box-footer">
+            <h2 style="font-size:35px">Contactos</h2>
+            <div class="red-social">
+                <a href="https://es-la.facebook.com/AgriculturaEcuador/photos" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/agricultura.organica/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/AgriculturaEc" class="fa fa-twitter"></a>
+                <a href="https://www.youtube.com/c/juangangelrTvAgro" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 <b>Agrisoft</b> - Todos los Derechos Reservados.</small>
+    </div>
+  </footer>

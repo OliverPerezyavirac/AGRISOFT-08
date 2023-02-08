@@ -1,0 +1,16 @@
+a.nav-link {
+    color      : #3E0E12;
+    font-weight: bold;
+}
+
+a.nav-link:hover {
+    color: #27DB20;
+}
+
+a.btn.btn-danger.w-100 {
+    background: #3E0E12;
+}
+
+.navbar-brand:hover {
+    color: #27DB20 !important;
+}

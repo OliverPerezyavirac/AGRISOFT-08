@@ -1,0 +1,98 @@
+<head>
+  <title>AGRISOFT</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script defer src="./js/scrooll.js"></script>
+</head>
+<header class="header">
+    <nav class="navbar   navbar-dark p-md-3">
+      <div class="container">
+    
+          <div>
+              <img src="../../../assets/images/logo.png" width="35px" alt="logo">
+              <a class="navbar-brand" style="color:#3E0E12; font-weight: bold;" href="./ag-admin">Administrador</a>
+          </div>
+      </div>
+    </nav>
+    </header>
+<body>
+  <div class="">
+    <div class="text-center ">
+        <h2 style="color: #0A8A0A; margin-top: 90px; ">{{titulo}}</h2>
+    </div>
+</div>
+    <div class="container formu ">
+      <div class="title">{{titulo}}</div>
+      <div class="content">
+        <form action="#" [formGroup]="productForm" (ngSubmit)=" agregarProduct()">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombre</span>
+              <input type="text" formControlName="name" name="name" placeholder="nombre del Producto" required>
+              <div class="text-danger"
+                *ngIf="productForm.get('name')?.hasError('required') && productForm.get('name')?.touched" >
+                <span>Este campo es <strong>obligatorio</strong></span>
+              </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Descripción:</span>
+              <input type="text" formControlName="description" name="description" placeholder="Descripción acerca del producto" required>
+              <div class="text-danger"
+              *ngIf="productForm.get('description')?.hasError('required') && productForm.get('description')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+              <span class="details">Precio</span>
+              <input type="number" formControlName="price" name="price" placeholder="precio del producto" required>
+              <div class="text-danger"
+              *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+            </div>
+            <div class="input-box">
+                <span class="details">Imagen</span>
+                <input type="text" formControlName="imageURL" name="imageURL" placeholder="agregar imagen" required>
+                <div class="text-danger"
+                *ngIf="productForm.get('imageURL')?.hasError('required') && productForm.get('imageURL')?.touched" >
+                <span>Este campo es <strong>obligatorio</strong></span>
+              </div>
+              </div>
+          <div class="mb-3">
+            <button routerLink="/ag-admin" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+            <button style="margin-left: 9px;"  type="submit" [disabled]="productForm.invalid" class="btn btn-success btn-lg float-end ">ACEPTAR</button>
+        </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box box-logo">
+            <div class="box-img-content">
+                <img class="img-footer" src="../../../assets/images/logo.png" alt="logo">
+            </div>
+            <div>
+                <h3 class="text-light" style="font-size:20px">AGRISOFT</h3>
+            </div>
+        </div>
+        <div class="box box-footer">
+            <h2 style="font-size:35px">Contactos</h2>
+            <div class="red-social">
+                <a href="https://es-la.facebook.com/AgriculturaEcuador/photos" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/agricultura.organica/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/AgriculturaEc" class="fa fa-twitter"></a>
+                <a href="https://www.youtube.com/c/juangangelrTvAgro" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 <b>Agrisoft</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>

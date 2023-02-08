@@ -1,0 +1,46 @@
+section {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content      : center;
+    align-items          : center;
+}
+
+@media (max-width: 600px) {
+    section {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        flex-direction : column;
+    }
+}
+
+.error-box {
+    position       : relative;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+.img {
+    width: 81%;
+}
+
+.error-box .footer {
+    width: 100%;
+    left : 0px;
+    right: 0px;
+}
+
+.error-body {
+    position   : relative;
+    padding-top: 5%;
+    width      : 100%;
+}
+
+.error-body h1 {
+    font-size  : 100px;
+    font-weight: 900;
+    text-shadow: 4px 4px 0 #ffffff, 6px 6px 0 #263238;
+    line-height: 210px;
+}

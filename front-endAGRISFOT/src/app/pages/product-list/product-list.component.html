@@ -1,0 +1,102 @@
+<head>
+    <title>AGRISOFT</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script defer src="./js/scrooll.js"></script>
+</head>
+<nav class="overlay-nav navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+
+        <div>
+
+            <img src="../../../assets/images/logo.png" width="35px" alt="logo">
+
+            <a class="navbar-brand" style="color:#3E0E12; font-weight: bold;" href="#">AGRISOFT</a>
+
+        </div>
+
+        <button class="navbar-toggler btn btn-outline-success" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav sticky-top">
+                <li class="nav-item">
+                    <a class="nav-link" href="./reportes">Reportes cominutarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./product-list">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./reportar">Reportar Plaga</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./perfiles">Atención agrícola</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['../login']">Iniciar sesión</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- <div *ngFor="let product of products" class="card card-body mb-2">
+    <div class="row">
+      <div class="col-md-8">
+        <ul>
+          <li>
+            name: {{product.name}}
+          </li>
+          <li>
+            description: {{product.description}}
+          </li>
+          <li>
+            price: {{product.price}}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <img [src]="product.imageURL" class="card-img">
+      </div>
+    </div>
+  </div> -->
+  <body>
+    
+  
+  <div class="mb-5">
+    <div class="col text-center text-uppercase">
+        <h2 style="color: #0A8A0A; margin-top: 90px; ">Lista de Fertilizantes</h2>
+    </div>
+  </div>
+  <div class="table-container">
+    <table class="table table-bordered border-success">
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th>Comprar</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price | currency:'USD'}}</td>
+          <td><img [src]="product.imageURL" width="200px"></td>
+          <td><a href="https://agripac.com.ec/division/herbicidas-cana-de-azucar/"><button type="button" class="btn btn-success">Comprar</button></a></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</body>
+<app-footer></app-footer>

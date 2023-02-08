@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script defer src="./js/scrooll.js"></script>
+
+<app-header></app-header>
+
+<body>
+  <div class="container">
+    <div class="title"><h4>{{titulo}}</h4></div>
+    <div class="content">
+      <form action="#" [formGroup]="reportForm" (ngSubmit)="agregarPlaga()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"><h6>¿Dónde te encuentras?</h6></span>
+            <input type="text" formControlName="plaga" name="plaga" placeholder="Ej. Chimborazo" required>
+            <div class="text-danger"
+              *ngIf="reportForm.get('plaga')?.hasError('required') && reportForm.get('plaga')?.touched" >
+              <span>Este campo es <strong>obligatorio</strong></span>
+            </div>
+          </div>
+          <br>
+          <div class="input-box">
+            <span class="details"><h6>Da una breve descripción</h6></span>
+            <input type="text" formControlName="description" name="description" placeholder="Ej. Esta plaga esta infectando a la platación de maiz" required>
+            <div class="text-danger"
+            *ngIf="reportForm.get('description')?.hasError('required') && reportForm.get('description')?.touched" >
+            <span>Este campo es <strong>obligatorio</strong></span>
+          </div>
+          </div>
+          <br>
+          <div class="input-box">
+            <span class="details"><h6>Fotografía</h6></span>
+            <input type="text" formControlName="imageURL" name="imageURL" placeholder="https://image.png" required>
+            <div class="text-danger"
+            *ngIf="reportForm.get('imageURL')?.hasError('required') && reportForm.get('imageURL')?.touched" >
+            <span>Este campo es <strong>obligatorio</strong></span>
+          </div>
+          </div>
+          <br>
+          <div class="input-box">
+            <span class="details"><h6>¿Cómo te afecta esta plaga?</h6></span>
+            <input type="text" formControlName="provincia" name="provincia" placeholder="Ej.perdida de productos y económica" required>
+            <div class="text-danger"
+            *ngIf="reportForm.get('provincia')?.hasError('required') && reportForm.get('provincia')?.touched" >
+            <span>Este campo es <strong>obligatorio</strong></span>
+          </div>
+          </div>
+        <div class="mb-3 btn-mb3">
+          <div>
+          <button routerLink="/home" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+        </div>
+        <div >
+          <button type="submit" [disabled]="reportForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
+        </div>
+      </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<app-footer></app-footer>

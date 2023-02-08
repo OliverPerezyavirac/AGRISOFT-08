@@ -1,0 +1,142 @@
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+}
+
+#posicion {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100vh;
+    width          : 100%;
+    background     : #e9e7e7;
+}
+
+.form-container {
+    display        : flex;
+    padding        : 40px 0;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : column;
+    border-radius  : 10px;
+    width          : 350px;
+    background     : #ffffff;
+    box-shadow     : 0px 10px 30px #7bf77b,
+        -15px -15px 30px #ffffff;
+}
+
+.form-login {
+    display        : flex;
+    flex-wrap      : wrap;
+    margin         : 4px auto;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    width          : 50%;
+}
+
+.form-control {
+    display        : flex;
+    justify-content: center;
+    font-size      : 1rem;
+    padding        : 0.5rem;
+    border-radius  : 5px;
+    border         : 1px solid #ccc;
+    width          : 100%;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow  : 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    background-color: #00ff40ec;
+    color           : #fff;
+    font-size       : 1.2rem;
+    padding         : 0.5rem 1rem;
+    border-radius   : 5px;
+    border          : none;
+    cursor          : pointer;
+    margin-top      : 1rem;
+    text-align      : center;
+
+
+}
+
+.btn:hover {
+    background-color: #23ec3d;
+    color           : #3E0E12;
+    outline         : 1px solid #3E0E12;
+
+}
+
+.bi-check {
+    outline      : 1px solid #fff;
+    border-radius: 100%;
+}
+
+.nav-link {
+    color        : blue;
+    font-size    : 1rem;
+    font-weight  : bold;
+    margin-top   : 2rem;
+    outline      : 2px solid blue;
+    padding      : 4px;
+    border-radius: 5px;
+}
+
+
+.button {
+    margin-top    : 20px;
+    background    : #fff;
+    outline       : 1px solid #3E0E12;
+    border        : none;
+    padding       : 10px 10px;
+    display       : inline-block;
+    font-size     : 12px;
+    font-weight   : 600;
+    width         : 120px;
+    text-transform: uppercase;
+    cursor        : pointer;
+    transform     : skew(0deg);
+    border-radius : 4px;
+}
+
+span {
+    display: inline-block;
+}
+
+.button::before {
+    content      : '';
+    position     : absolute;
+    top          : 0;
+    bottom       : 0;
+    right        : 100%;
+    left         : 0;
+    background   : #3E0E12;
+    opacity      : 0;
+    z-index      : -1;
+    transition   : all 0.5s;
+    border-radius: 4px;
+}
+
+.button:hover {
+    color        : #fff;
+    font-weight  : bold;
+    border-radius: 4px;
+}
+
+.button:hover::before {
+    left   : 0;
+    right  : 0;
+    opacity: 1;
+}
+
+@media screen and (max-width: 360px) {
+    .form-container {
+        outline   : none;
+        background: none;
+        box-shadow: none;
+    }
+}
